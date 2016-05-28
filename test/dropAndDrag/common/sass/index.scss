@@ -1,0 +1,76 @@
+@import "compass";
+@import"compass/reset";
+@charset "UTF-8";
+
+$textSize:20px; 
+$yellow:#ddb824;
+$boxSize:300px;
+
+body{
+	background-color:#debe99;
+}
+
+p{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-12px;
+	margin-left:-24px;
+}
+
+.dragDiv{
+	z-index:10;
+}
+
+.box1{
+	width:300px;
+	height:200px;
+	background-color:#4b8d67;
+	p{
+		font-size:$textSize;
+	}
+}
+
+.box2{
+	@include border-radius(0 0 40px 40px);
+	width:200px;
+	height:200px;
+	background:linear-gradient(bottom,#023fdb,#32a29e,#b3f5f3);
+}
+
+.box3{
+	float:left;
+	@extend .box1;
+	@include box-shadow(2px 2px 12px 2px #8d6f4c);
+	border: 3px solid #544b8d;
+	p{
+		font-size:20px;
+		color:$yellow;
+	}
+
+}
+
+.box4{
+	width:50px + $boxSize;
+	height:100px;
+	background-color:#f53;
+}
+
+.box5{
+	@include border-radius(50%);
+	width:300px;
+	height:300px;
+	background:linear-gradient(120deg,#ff9489,#ba5a5a,#824321);
+	// background:radial-gradient(top, circle 50%, #ff5e33, #ff9333,#38ff33);
+	// background:-webkit-gradient(radial, top, 30%, farthest-side, 70%, from(#ff5e33), color-stop(farthest-side, #ff9333), to(#38ff33));
+	@include opacity(0.8);
+}
+
+.dastBox{
+	width:300px;
+	height:400px;
+	background-color:#4b788d;
+	position: relative;
+	top:-700px;
+	left:700px;
+}
